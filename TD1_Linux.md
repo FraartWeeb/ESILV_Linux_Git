@@ -3,8 +3,10 @@ EXERCICE 1
 cd /
 
 2. Display the content of the current (root) directory
+ls
 
 3. Check your current location
+pwd
 
 4. Try to create a directory named test
 
