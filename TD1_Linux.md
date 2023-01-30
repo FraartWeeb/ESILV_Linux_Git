@@ -1,6 +1,6 @@
 EXERCICE 1
 1. Go to the root directory
-2. 
+
 cd /
 
 2. Display the content of the current (root) directory
