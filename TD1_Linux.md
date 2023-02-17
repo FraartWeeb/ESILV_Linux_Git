@@ -1,4 +1,4 @@
-## EXERCICE 1
+# EXERCICE 1
 
 1. Go to the root directory
 ```
@@ -51,7 +51,7 @@ cd test
 pwd
 ```
 
-## EXERCICE 2
+# EXERCICE 2
 
 1. Go to your home directory (should be named after you, you might be
 there by default)
@@ -97,7 +97,7 @@ rm -r notes
 ```
 
 
-## Exercice 3
+# Exercice 3
 
 1. Create a script script_1.sh in the folder linux_ex_1
 ```
@@ -124,9 +124,9 @@ chmod +x script_1.sh
 ```
 
 
-## Exercice 4
+# Exercice 4
 
-# 4.1 Change the rights for accessing or modifying a file
+## 4.1 Change the rights for accessing or modifying a file
 
 1. Create a file credentials in the folder linux_ex_1
 ```
@@ -207,7 +207,7 @@ chmod 777 credentials.txt
 ls -l
 ```
 
-# 4.2 Access root files
+## 4.2 Access root files
 
 1. Go to the root folder
 ```
@@ -272,7 +272,7 @@ vi .private_file
 cat .private_file
 ```
 
-4.3 Change a file owner
+## 4.3 Change a file owner
 
 1. Change permissions of .private_file to read and write for all users, in
 normal user mode
