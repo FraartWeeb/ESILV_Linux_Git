@@ -122,3 +122,169 @@ cat script_1.sh
 chmod +x script_1.sh
 ./script_1.sh
 ```
+
+
+## Exercice 4
+
+# 4.1 Change the rights for accessing or modifying a file
+
+1. Create a file credentials in the folder linux_ex_1
+```
+touch credentials.txt
+```
+(a) Write any kind of (fake) personal information within the file
+```
+vi credentials.txt
+Press I, write, Press Echap, :w, enter, :q, enter
+```
+(b) Display the file content
+```
+cat credentials.txt
+```
+(c) Display the current permissions
+```
+ls -ls
+```
+2. Change the current permissions to : read only for all users
+```
+chmod 444 credentials.txt
+```
+(a) Display the new permissions
+```
+ls -l
+```
+(b) Modify and save the file
+```
+vi credentials.txt
+Insert -> Warning : Changing a readonly file
+:q! to quit without changes
+```
+(c) Display the file content
+```
+cat credentials.txt
+```
+3. Change the permissions back to read and write for all users
+```
+chmod 666 credentials.txt
+```
+(a) Display the new permissions
+```
+ls -l
+```
+(b) Modify and save the file
+```
+vi credentials.txt
+Insert : Works well
+```
+(c) Display the file content
+```
+cat credentials.txt
+```
+
+On the same file :
+1. Add the execute permission to the owner
+```
+chmod 766 credentials.txt
+```
+(a) Display the new permissions
+```
+ls -l
+```
+2. Remove the read permission to other users
+```
+chmod 722 credentials.txt
+```
+(a) Display the new permissions
+```
+ls -l
+```
+3. Change the permissions to read, write and execute for all users
+```
+chmod 777 credentials.txt
+```
+(a) Display the new permissions
+```
+ls -l
+```
+
+# 4.2 Access root files
+
+1. Go to the root folder
+```
+cd
+```
+2. Create a file in root user mode named .private_file
+```
+touch .private_file
+ls
+-> Does not appear
+ls -a 
+-> Appears
+```
+(a) Write some information in the file
+```
+vi .private_file
+```
+(b) Display the file content
+```
+cat .private_file
+```
+(c) Display all the files in the folder including hidden files
+```
+ls -a
+```
+3. Modify the file in normal user mode
+```
+su - fraart
+write password
+vi .private_file
+```
+(a) Write some new information in the file
+```
+I + text + Esc + :w + :q
+```
+(b) Display the file content
+```
+cat .private_file
+```
+4. Modify the file in root user mode
+```
+su - root
+```
+(a) Write some new information in the file
+```
+vi .private_file
+```
+(b) Display the file content
+```
+cat .private_file
+```
+5. Change permissions to read, write and execute for all users
+```
+chmod 777 .private_file
+```
+(a) Modify the file content in normal user mode
+```
+vi .private_file
+```
+(b) Display the file content
+```
+cat .private_file
+```
+
+4.3 Change a file owner
+
+1. Change permissions of .private_file to read and write for all users, in
+normal user mode
+```
+chmod 666 .private_file
+```
+2. Set the new file owner as the current user
+```
+chown $(whoami) .private_file
+```
+3. Change permissions of .private_file to read and write for all users, in
+normal user mode
+```
+chmod 666 .private_file
+```
