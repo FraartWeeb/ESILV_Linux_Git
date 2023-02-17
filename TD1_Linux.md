@@ -36,7 +36,7 @@ cd ..
 9. Go directly to your home directory (named after you). It should be a
 very simple command, which take no name as parameter of the path
 ```
-cd ../
+cd 
 ```
 10. Try to create a directory named test
 ```
@@ -51,3 +51,47 @@ cd test
 pwd
 ```
 
+## EXERCICE 2
+
+1. Go to your home directory (should be named after you, you might be
+there by default)
+```
+cd
+```
+2. Check your current location
+```
+pwd
+```
+4. Create a folder linux_ex_1
+```
+mkdir linux_ex_1
+```
+5. Go into this folder
+```
+cd linux_ex_1
+```
+6. Create an empty text file named [first_name]_[last_name].txt (e.g. alexis_bogroff.txt)
+```
+touch arthur_frachon.txt
+```
+7. Create a folder notes
+```
+mkdir notes
+```
+8. Move your text file into this folder
+```
+mv arthur_frachon.txt notes 
+```
+9. Rename the text file by appending the current year [first_name]_[last_name]_[current_year].txt
+```
+mv arthur_frachon.txt arthur_frachon_2023.txt
+```
+10. Make a copy of this folder, name it notes_2022
+```
+cd ..
+cp -R notes notes_2023
+```
+11. Delete the first folder (notes) using the verbose option
+```
+rm -r notes
+```
