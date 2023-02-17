@@ -95,3 +95,30 @@ cp -R notes notes_2023
 ```
 rm -r notes
 ```
+
+
+## Exercice 3
+
+1. Create a script script_1.sh in the folder linux_ex_1
+```
+nano script_1.sh
+```
+2. In the script, write the commands that would output the following :
+Script running please wait ...
+Done.
+```
+echo "Script running please wait ..."
+```
+3. Quit editing and save the script
+```
+Ctrl X, Yes, Enter
+```
+4. Display the content of the script (using a command, not from an editor)
+```
+cat script_1.sh
+```
+5. Run the script
+```
+chmod +x script_1.sh
+./script_1.sh
+```
