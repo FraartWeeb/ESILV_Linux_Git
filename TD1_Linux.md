@@ -293,83 +293,110 @@ chmod 666 .private_file
 
 1. Update your main package manager named apt
 ```
+sudo apt update
 ```
 2. Upgrade apt
 ```
+sudo apt upgrade
 ```
 3. Install the package cmatrix
 ```
+sudo apt install cmatrix
 ```
 4. Launch cmatrix
 ```
+cmatrix
 ```
 5. Quit cmatrix
 ```
+Ctrl + C
 ```
 6. Install the package tmux
 ```
+sudo apt install tmux
 ```
 7. Launch tmux
 ```
+tmux
 ```
 8. Say "Hello session 0" using bash in your current tmux session
 ```
+echo "Hello session 0"
 ```
 9. Launch cmatrix in your current tmux session
 ```
+cmatrix
 ```
 10. Detach from the current tmux session (without stopping cmatrix)
 ```
+Ctrl + b ; d
 ```
 11. Create a new tmux session
 ```
+tmux new
 ```
 12. Say "Hello session 1" using bash in your new tmux session
 ```
+echo "Hello session 1"
 ```
 13. Detach from the current tmux session
 ```
+Ctrl + d
 ```
 14. List all running sessions
 ```
+tmux ls
 ```
 15. Attach again to session 0
 ```
+tmux a -t 0
 ```
 16. Detach again
 ```
+Ctrl + b ; d
 ```
 17. Attach again to session 1
 ```
+tmux a -t 1
 ```
 18. Detach again
 ```
+Ctrl + b ; d
 ```
 19. List all running sessions
 ```
+tmux ls
 ```
 20. Kill all tmux sessions and quit tmux
 ```
+tmux kill-server
 ```
 21. List all sessions
 ```
+tmux ls
 ```
 
 ## Exercice 4.5 Use functions arguments / parameters
 
 1. Display the cmatrix help function
 ```
+cmatrix -help
 ```
 2. Launch cmatrix and make it display white characters (in place of the
 green)
 ```
+cmatrix -C white
 ```
 3. Re-launch cmatrix and slow down the speed of characters actualization
 ```
+cmatrix -u 8 (default = 4)
 ```
 4. Stop cmatrix
 ```
+Ctrl + c
 ```
 5. Launch cmatrix with both :
 ```
+cmatrix -C white -u 8
+cmatrix -r
 ```
